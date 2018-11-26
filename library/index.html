@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      body{
+        margin:0;
+      }
+      div{
+        border-bottom:1px solid black;
+        padding:10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Declarative Rendering</h1>
+    <div id="d1">
+      {{message}}
+    </div>
+
+    <h1>Reactive</h1>
+    <div id="d2">
+      {{message}}
+    </div>
+    <button id="b1" onclick="start()">{{message}}</button>
+
+    <h1>Conditions</h1>
+    <div id="d3">
+      <span v-if="seen">
+        Visible
+      </span>
+    </div>
+    <button id="b2" onclick="show()">{{message}}</button>
+
+    <h1>Loop</h1>
+    <div id="d4">
+      <ul>
+        <li v-for="num in nums">
+          {{num.text}}
+        </li>
+      </ul>
+    </div>
+  </body>
+
+  <h1>Buttons</h1>
+  <div id="d5">
+    <p>{{message}}</p>
+    <button v-on:click="appendMessage">append</button>
+    <button v-on:click="reset">reset</button>
+  </div>
+
+  <h1>Model</h1>
+  <div id="d6">
+    <p>{{message}}</p>
+    <input v-model="message"/>
+  </div>
+
+  <h1>Templates</h1>
+  <div id="d7">
+    <ul>
+      <c1
+        v-for="num in nums"
+        v-bind:content="num"
+      >
+      </c1>
+    </ul>
+  </div>
+
+  <h1>Computed property</h1>
+  <div id="d8">
+    <p>message: {{message}}</p>
+    <p>longmessage: {{longmessage}}</p>
+    <input v-model="message"/>
+  </div>
+
+  <h1>Watchers</h1>
+  <div id="d9">
+    <p>message:{{message}}</p>
+    <p>message before:{{messagebefore}}</p>
+    <input v-model="message"/>
+  </div>
+
+  <script src="index.js"></script>
+</html>
