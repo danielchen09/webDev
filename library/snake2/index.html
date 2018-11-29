@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title></title>
+  </head>
+  <body>
+
+    <div id="main">
+
+      <div>
+        player 1: {{score}}
+        <br>
+        player 2: {{score2}}
+      </div>
+      <div
+      class="snake"
+      v-for="(b,index) in body"
+      :style="{left: b[0]*pix+'px', top:b[1]*pix+'px'}"
+
+      >
+        &nbsp;
+      </div>
+
+      <div
+      class="snake2"
+      v-for="(b,index) in body2"
+      :style="{left: b[0]*pix+'px', top:b[1]*pix+'px'}"
+      >
+        &nbsp;
+      </div>
+
+      <div
+      class="food"
+      v-for="(f,index) in food"
+      :style="{left: f[0]*pix+'px', top: f[1]*pix+'px'}"
+      >
+      &nbsp;
+      </div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>

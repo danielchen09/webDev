@@ -130,37 +130,3 @@ var d9=new Vue({
     }
   }
 });
-var button=new Vue({
-  el:'#button',
-  data:{
-    available:false,
-    nearby:false
-  },
-  computed:{
-    checkclass:function(){
-      return{
-        available: this.available,
-        nearby: this.nearby
-      }
-    }
-  }
-});
-var array = new Vue({
-    el: '#array',
-    data: {
-        baseObject: {
-            fontSize: "50px",
-            padding: "10px",
-        },
-        successObject: {
-            color: "green",
-            backgroundColor: "lightgreen",
-            border: "1px solid green"
-        },
-        dangerObject: {
-            color: "darkred",
-            backgroundColor: "red",
-            border: "1px solid darkred"
-        },
-    }
-});

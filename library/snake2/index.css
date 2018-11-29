@@ -1,0 +1,20 @@
+.snake{
+  position: absolute;
+  background-color: black;
+  width: 15px;
+  height: 15px;
+}
+
+.snake2{
+  position: absolute;
+  background-color: yellow;
+  width: 15px;
+  height: 15px;
+}
+
+.food{
+  position: absolute;
+  background-color: green;
+  width:15px;
+  height:15px;
+}

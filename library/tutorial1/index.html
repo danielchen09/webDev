@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="d1">
+      <table>
+        <tbody>
+          <tr v-for="(row,r) in grid">
+            <td
+            style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
+            :style="{background:i?'black':'white'}"
+            unselectable="on" onselectstart="return false;" onmousedown="return false;" v-for="(i,c) in row" @click="q(r,c)" @mouseover="p(r, c)" >
+              &nbsp;
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+
+  <script src="index.js"></script>
+</html>
