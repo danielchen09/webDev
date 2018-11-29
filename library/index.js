@@ -130,3 +130,56 @@ var d9=new Vue({
     }
   }
 });
+var button=new Vue({
+  el:'#button',
+  data:{
+    available:false,
+    nearby:false
+  },
+  computed:{
+    checkclass:function(){
+      return{
+        available: this.available,
+        nearby: this.nearby
+      }
+    }
+  }
+});
+var array = new Vue({
+    el: '#array',
+    data: {
+        baseObject: {
+            fontSize: "50px",
+            padding: "10px",
+        },
+        successObject: {
+            color: "green",
+            backgroundColor: "lightgreen",
+            border: "1px solid green"
+        },
+        dangerObject: {
+            color: "darkred",
+            backgroundColor: "red",
+            border: "1px solid darkred"
+        },
+    }
+});
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count += 1">You clicked me {{ count }} times.</button>'
+})
+new Vue({ el: '#clickcount' })
+var buttonCounter2Data = {
+  count: 0
+}
+Vue.component('button-counter2', {
+  data: function () {
+    return buttonCounter2Data
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+});
+new Vue({ el: '#click3' })

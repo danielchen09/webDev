@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="styles.css" rel="stylesheet"/>
     <style>
       body{
         margin:0;
@@ -10,6 +12,7 @@
         border-bottom:1px solid black;
         padding:10px;
       }
+
     </style>
   </head>
 
@@ -80,6 +83,33 @@
     <p>message before:{{messagebefore}}</p>
     <input v-model="message"/>
   </div>
+  <h1> Array Syntax</h1>
+  <div id="array">
+     <div v-bind:style="[baseObject,successObject]">Green Style</div>    
+     <div v-bind:style="[baseObject,dangerObject]">Red Style</div>  
+  </div>
+  <h1>Button Binding Inline Styles</h1>
+  <div id="button">
+    <button v-on:click=nearby=!nearby> Check it </button>
+    <button v-on:click="available=!available">Change</button>
+    <div v-bind:class="checkclass">
+    <span> HEHE</span>
+  </div>
+
+  <h1> Click count</h1>
+  <div id="clickcount">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+  </div>
+  <div id="click3">
+    <button-counter2></button-counter2>
+    <button-counter2></button-counter2>
+    <button-counter2></button-counter2>
+  </div>
+
+
 
   <script src="index.js"></script>
 </html>
+
