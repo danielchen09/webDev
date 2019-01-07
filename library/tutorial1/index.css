@@ -2,6 +2,7 @@ td{
   cursor: pointer;
   background-color: black;
   width:15px;
+  height:15px;
   padding: 2px;
 }
 td:hover{
@@ -13,4 +14,6 @@ tr{
 table{
   table-layout:fixed;
   border:1px solid black;
+  width:450px;
+  height:450px;
 }
